@@ -263,53 +263,22 @@
 
 
 
-  // faq
+ 
 
- document.addEventListener("DOMContentLoaded", function () {
 
-  const faqs = document.querySelectorAll(".faq-item");
-  const btn = document.getElementById("faqToggleBtn");
+// faq
+document.querySelectorAll(".faq-question").forEach((item) => {
+  item.addEventListener("click", () => {
 
-  let showAll = false;
-  const visibleCount = 4; // initially show 4 FAQs
+    const parent = item.parentElement;
 
-  // 🔹 Hide extra FAQs initially
-  faqs.forEach((item, index) => {
-    if (index >= visibleCount) {
-      item.classList.add("hidden-faq");
-    }
-  });
-
-  // 🔹 Accordion (only one open)
-  faqs.forEach((faq) => {
-    faq.querySelector(".faq-question").addEventListener("click", () => {
-
-      faqs.forEach((item) => {
-        if (item !== faq) {
-          item.classList.remove("active");
-        }
-      });
-
-      faq.classList.toggle("active");
-    });
-  });
-
-  // 🔹 Read More / Less Button
-  btn.addEventListener("click", () => {
-    showAll = !showAll;
-
-    faqs.forEach((item, index) => {
-      if (index >= visibleCount) {
-        if (showAll) {
-          item.classList.remove("hidden-faq");
-        } else {
-          item.classList.add("hidden-faq");
-          item.classList.remove("active"); // close if open
-        }
+    document.querySelectorAll(".faq-item").forEach((faq) => {
+      if (faq !== parent) {
+        faq.classList.remove("active");
       }
     });
 
-    btn.innerText = showAll ? "Read Less" : "Read More";
-  });
+    parent.classList.toggle("active");
 
+  });
 });

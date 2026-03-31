@@ -52,13 +52,12 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="./about.html">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="./courses.html">Courses</a></li>
+          <li><a href="./portfolio.html">Doctor Portfolio</a></li>
+          <li class="dropdown"><a href="#"><span>Brain Procedure</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+              <li><a href="./cms.html">Headache Treatment</a></li>
+              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Deep Dropdown 1</a></li>
@@ -70,7 +69,7 @@
               </li>
               <li><a href="#">Dropdown 2</a></li>
               <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="#">Dropdown 4</a></li> -->
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
@@ -1959,6 +1958,61 @@
   <!--  crousal -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+
+  <script>
+
+    // faq
+
+ document.addEventListener("DOMContentLoaded", function () {
+
+  const faqs = document.querySelectorAll(".faq-item");
+  const btn = document.getElementById("faqToggleBtn");
+
+  let showAll = false;
+  const visibleCount = 4; // initially show 4 FAQs
+
+  // 🔹 Hide extra FAQs initially
+  faqs.forEach((item, index) => {
+    if (index >= visibleCount) {
+      item.classList.add("hidden-faq");
+    }
+  });
+
+  // 🔹 Accordion (only one open)
+  faqs.forEach((faq) => {
+    faq.querySelector(".faq-question").addEventListener("click", () => {
+
+      faqs.forEach((item) => {
+        if (item !== faq) {
+          item.classList.remove("active");
+        }
+      });
+
+      faq.classList.toggle("active");
+    });
+  });
+
+  // 🔹 Read More / Less Button
+  btn.addEventListener("click", () => {
+    showAll = !showAll;
+
+    faqs.forEach((item, index) => {
+      if (index >= visibleCount) {
+        if (showAll) {
+          item.classList.remove("hidden-faq");
+        } else {
+          item.classList.add("hidden-faq");
+          item.classList.remove("active"); // close if open
+        }
+      }
+    });
+
+    btn.innerText = showAll ? "Read Less" : "Read More";
+  });
+
+});
+  </script>
 
 </body>
 
