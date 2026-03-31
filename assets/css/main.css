@@ -7099,6 +7099,95 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+
+/* about us */
+
+
+.about-doctor-section h2 {
+  font-weight: 700;
 }
+
+.section-tag {
+  color: #28a745;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.doctor-img {
+  position: relative;
+}
+
+.exp-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #28a745;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about-list li {
+  margin-bottom: 8px;
+}
+
+.highlight-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.spec-card {
+  padding: 25px;
+  border-radius: 10px;
+  background: #f8f9fa;
+}
+
+.cta-section {
+  background: #28a745;
+}
+
+@media (max-width: 768px) {
+  .exp-badge {
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+  }
+}
+
+
+.custom-table {
+  border: 1px solid #ddd;
+}
+
+.custom-table thead {
+  background: #f8f9fa;
+}
+
+.custom-table th {
+  font-weight: 600;
+  color: #6a1b9a;
+}
+
+.custom-table td {
+  padding: 15px;
+}
+
+.custom-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.text-success {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text-danger {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* =================== */
