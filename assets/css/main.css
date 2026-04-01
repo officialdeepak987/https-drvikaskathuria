@@ -997,6 +997,8 @@ section,
 
 .hero-doctor-wrap{
   text-align: center;
+  display: flex;
+  justify-content: center;
   
 }
 .hero-doctor-wrap img{
@@ -7554,6 +7556,64 @@ textarea.yacht-input {
   color: #f4b400;
 }
 
+
+/* glid crousal */
+
+
+/* CARD */
+.course-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  text-align: center;
+  height: 100%;
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.course-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ARROWS */
+.glide__arrow {
+  background: #198754;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* DOTS */
+.glide__bullet {
+  background: #ccc;
+}
+
+.glide__bullet--active {
+  background: #198754;
+}
+
+
+
+
+
+/*  */
+
 /* Swiper */
 .swiper {
   padding-bottom: 40px;
@@ -7568,7 +7628,13 @@ textarea.yacht-input {
   background: #5aa382;
 }
 
-
+.card-item {
+  height: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /* faq */
 
 .faq-section {
@@ -7645,7 +7711,7 @@ textarea.yacht-input {
 }
 
 /* CARD */
-.course-card {
+.course-card-listing {
   width: calc(33.33% - 14px);
   background: #fff;
   border-radius: 16px;
@@ -7654,7 +7720,7 @@ textarea.yacht-input {
   transition: 0.3s;
 }
 
-.course-card:hover {
+.course-card-listing:hover {
   transform: translateY(-5px);
 }
 

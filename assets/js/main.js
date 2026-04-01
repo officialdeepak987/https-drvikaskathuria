@@ -217,7 +217,7 @@
 
   var swiper = new Swiper(".courseSwiper", {
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween:20,
     loop: true,
 
     pagination: {
@@ -282,3 +282,21 @@ document.querySelectorAll(".faq-question").forEach((item) => {
 
   });
 });
+
+
+// grild
+
+ new Glide('.courseGlide', {
+    type: 'carousel',
+    perView: 3,
+    gap: 20,
+    autoplay: 3000,
+    breakpoints: {
+      1024: {
+        perView: 2
+      },
+      768: {
+        perView: 1
+      }
+    }
+  }).mount();
