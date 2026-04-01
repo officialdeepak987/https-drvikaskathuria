@@ -3965,8 +3965,11 @@ section,
   left: 20px;
 }
 
+
 .icon-circle img {
-  width: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
 /* Content */
@@ -7807,3 +7810,121 @@ textarea.yacht-input {
 }
 
 /*  */
+
+
+
+
+/* expertise section */
+
+/* SECTION */
+.experience-section {
+  padding: 80px 0;
+  background: #f9fbfc;
+}
+
+/* TITLE */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* WRAPPER */
+.experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* CARD */
+.experience-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #e9f1f7;
+  padding: 25px;
+  border-radius: 25px;
+}
+
+/* REVERSE */
+.experience-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* CONTENT */
+.experience-content {
+  flex: 1;
+}
+
+.experience-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.experience-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.experience-content h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.experience-content ul {
+  padding-left: 18px;
+}
+
+.experience-content ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* IMAGE */
+.experience-img {
+  flex: 1;
+}
+
+.experience-img img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ============================= */
+/* 📱 TABLET */
+/* ============================= */
+@media (max-width: 992px) {
+  .experience-card {
+    flex-direction: column;
+  }
+
+  .experience-card.reverse {
+    flex-direction: column;
+  }
+
+  .experience-img img {
+    height: 250px;
+  }
+}
+
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .experience-content h3 {
+    font-size: 18px;
+  }
+
+  .experience-img img {
+    height: 220px;
+  }
+}
+
+/* end  */
