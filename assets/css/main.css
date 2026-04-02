@@ -7928,3 +7928,109 @@ textarea.yacht-input {
 }
 
 /* end  */
+
+
+
+/* cta booking appointment */
+/* SECTION */
+.cta-section {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #198754, #20c997);
+  overflow: hidden;
+  color: #fff;
+}
+
+/* BACKGROUND DOT EFFECT */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* CONTENT */
+.cta-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* HEADING */
+.cta-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.cta-section p {
+  font-size: 16px;
+  color: #e6f4ea;
+  margin-bottom: 30px;
+}
+
+/* BUTTON WRAPPER */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  background: #fff;
+  color: #198754;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #f1f1f1;
+}
+
+/* WHATSAPP BUTTON */
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5a;
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .cta-section h2 {
+    font-size: 26px;
+  }
+
+  .cta-section p {
+    font-size: 14px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-whatsapp {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* end cta */
