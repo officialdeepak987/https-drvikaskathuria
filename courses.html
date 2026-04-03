@@ -212,7 +212,108 @@
   </div>
 </section>
 
+   <!-- faq -->
 
+        <section class="faq-section">
+            <div class="container">
+
+                <div class="section-title text-center">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Common questions about headache treatment and neurological care</p>
+                </div>
+
+                <div class="faq-container">
+
+                    <!-- FAQ 1 -->
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            What is the main cause of frequent headaches?
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Frequent headaches can be caused by stress, poor sleep, dehydration, lifestyle habits,
+                                or underlying neurological conditions. Proper diagnosis is important to identify the
+                                exact cause.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            When should I consult a doctor for headaches?
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                You should consult a doctor if headaches are severe, frequent, worsening over time, or
+                                associated with symptoms like vomiting, vision problems, or dizziness.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is the difference between migraine and normal headache?
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Migraines are usually more intense and may include symptoms like nausea, sensitivity to
+                                light, and throbbing pain, while normal headaches are generally mild to moderate.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can headaches be treated permanently?
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Many headaches can be effectively managed or reduced with proper treatment, lifestyle
+                                changes, and medical guidance. Some conditions may require long-term management.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What are common triggers of migraine?
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Common triggers include stress, lack of sleep, certain foods, bright lights, loud
+                                sounds, hormonal changes, and dehydration.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is headache related to brain problems?
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Most headaches are not serious, but in some cases they may be related to neurological
+                                conditions. A proper check-up helps rule out serious issues.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- faq end -->
 
     </main>
 
@@ -339,6 +440,41 @@
     <!--  crousal -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+
+    <script>
+      // faq
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const faqs = document.querySelectorAll(".faq-item");
+      const btn = document.getElementById("faqToggleBtn");
+
+      let showAll = false;
+      const visibleCount = 4; // initially show 4 FAQs
+
+      // 🔹 Hide extra FAQs initially
+      faqs.forEach((item, index) => {
+        if (index >= visibleCount) {
+          item.classList.add("hidden-faq");
+        }
+      });
+
+      // 🔹 Accordion (only one open)
+      faqs.forEach((faq) => {
+        faq.querySelector(".faq-question").addEventListener("click", () => {
+
+          faqs.forEach((item) => {
+            if (item !== faq) {
+              item.classList.remove("active");
+            }
+          });
+
+          faq.classList.toggle("active");
+        });
+      });
+
+    </script>
 
 </body>
 
