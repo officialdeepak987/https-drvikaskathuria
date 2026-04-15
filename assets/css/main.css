@@ -2276,9 +2276,19 @@ section,
 
 /* video section end */
 
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+
+
+.doctor-video{
+  height: 350px;
+}
+
+.highlight-box p{
+  color: #000;
+}
 @media (max-width: 768px) {
   .portfolio {
     padding: 64px 0;
